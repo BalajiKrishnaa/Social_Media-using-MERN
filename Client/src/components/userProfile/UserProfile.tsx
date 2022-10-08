@@ -32,11 +32,7 @@ const UserProfile = () => {
   return (
     <div className="container mt-5">
       <img
-        src={`${
-          user?.user?.googleId
-            ? user?.user?.pic
-            : `http://localhost:5000/uploads/${user?.user?.pic}`
-        }`}
+        src={ `http://localhost:5000/uploads/${user?.user?.pic}`}
         style={{ width: "60px", borderRadius: "50%", height: 50 }}
       />
       <div>

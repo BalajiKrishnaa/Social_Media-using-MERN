@@ -26,7 +26,7 @@ console.log(users)
         <img
         className='conversationImg' src={
             users?.pic
-              ?  `${!users.googleId?`http://localhost:5000/uploads/${users?.pic}`:users?.pic}`
+              ?  `http://localhost:5000/uploads/${users?.pic}`
               :"https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-674010.jpg&fm=jpg"
           } />
     <span className='conversationName'>{users?.name}</span>

@@ -173,9 +173,7 @@ function Navbar() {
                           height: "30px",
                         }}
                         src={
-                          user && !user?.result?.googleId
-                            ? `http://localhost:5000/uploads/${user?.result.pic}`
-                            : `${user?.result.pic}`
+                             `http://localhost:5000/uploads/${user?.result.pic}`
                         }
                       ></img>
                     ) : (

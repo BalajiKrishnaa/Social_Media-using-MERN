@@ -43,7 +43,7 @@ useEffect(()=>{
     }
   }
   checkID();
-  console.log("sad")
+console.log(pic);
 
 },[userId,dispatch])
   return (
@@ -51,7 +51,7 @@ useEffect(()=>{
 
         <div className='position-relative' style={{zIndex:100}}>
       <p className='text-center text-danger' style={{fontWeight:500,fontSize:"30px"}}>Profile</p>
-      <img src={`${!user?.result?.googleId?`http://localhost:5000/uploads/${user?.result?.pic}`:user?.result?.pic}`} style={{width:"60px",borderRadius:"50%",height:50}}/>
+      <img src={`http://localhost:5000/uploads/${user?.result?.pic}`} style={{width:"60px",borderRadius:"50%",height:50}}/>
       <p ><span style={{fontSize:"25px"}}>Name:</span><span className='text-success' style={{fontWeight:600,fontSize:"25px"}}>&nbsp;{user?.result?.name}</span></p>
       <p ><span style={{fontSize:"25px"}}>Contact Number:</span><span className='text-dark' style={{fontWeight:600,fontSize:"25px"}}>&nbsp;{user?.result?.mobileNumber}</span></p>
       <form onSubmit={submitHandler} encType="multipart/form-data" autoComplete='off'>

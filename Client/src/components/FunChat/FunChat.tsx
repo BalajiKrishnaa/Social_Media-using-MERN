@@ -23,7 +23,6 @@ const FunChat = () => {
   const user = JSON.parse(localStorage.getItem("profile"));
   const scrollRef:any = useRef();
   const convo = useAppSelector(state=>state.auth.convo)
-  
   useEffect(() => {
     socket.current = io("ws://localhost:8080");
     socket.current.on("getMessage",(data)=>{
@@ -133,7 +132,7 @@ useEffect(() => {
                     <div ref={scrollRef}>
                      
                       
-                      <Message message={m} own={m.sender === user?.result?._id} />
+                      <Message message={m} own={m.sender === user?.result?._id} image={user?.result?.pic}/>
                     </div>
                   ))}
           
